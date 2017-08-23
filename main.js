@@ -505,11 +505,11 @@ $(document).ready(function() {
     var randomIndex = Math.floor(Math.random() * 166);
     // Send html new quote.
     $("#message").html(function() {
-      return "<p>" + quotes[randomIndex].quoteText + "</p>";
+      return "<p>\"" + quotes[randomIndex].quoteText + "\"</p>";
     });
     // Send html Author.
     $("#author").html(function() {
-      if (returnAuthor === ""){
+      if (quotes[randomIndex].quoteAuthor === ""){
         return "<p>- Anonymous</p>";
       } else {
         return "<p>- " + quotes[randomIndex].quoteAuthor + "</p>";
